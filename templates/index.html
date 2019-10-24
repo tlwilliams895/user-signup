@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        form {
+            display: table;
+            margin: auto;
+            border-style: double;
+            padding: 30px;
+            border-width: 8px;
+            background-color: #90d0e6;
+            font-family: "Georgia", Times, serif;
+        }
+
+        td {
+            display: table-row;
+        }
+
+        label {
+            display: table-cell;
+        }
+
+        input {
+            display: table-cell;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User-Signup Form</h1>
+
+    <form action="/movies" method='POST'>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="username">User_Name:</label>
+                    </td>
+                    <td>
+                        <input name="username" type="text" value="">
+                        <span class="error">{{username_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">User_Password:</label>
+                    </td>
+                    <td>
+                        <input name="password" type="password" value="">
+                        <span class="error">{{password_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="verifypassword">Verify_User_Password:</label>
+                    </td>
+                    <td>
+                        <input name="verified" type="password" value="">
+                        <span class="error">{{verified_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Input_User_Email (Optional):</label>
+                    </td>
+                    <td>
+                        <input name="email" type="text" value="">
+                        <span class="error">{{email_error}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="Confirm" />
+    </form>
+</body>
+
+</html>
